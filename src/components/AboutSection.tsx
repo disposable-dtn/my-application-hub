@@ -37,8 +37,8 @@ const AboutSection = () => {
               Building the <span className="text-gradient">Future</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              I'm a freshman Electrical and Computer Engineering student at Olin College of Engineering, 
-              driven by a passion for creating intelligent systems that bridge hardware and software.
+              I'm a freshman Engineering: Robotics student at Olin College of Engineering, 
+              passionate about autonomous systems, embedded development, and hardware design.
             </p>
           </div>
 
@@ -68,11 +68,12 @@ const AboutSection = () => {
           </div>
 
           {/* Stats */}
-          <div className="mt-16 grid grid-cols-3 gap-8">
+          <div className="mt-16 grid grid-cols-4 gap-8">
             {[
-              { value: "5+", label: "Projects" },
+              { value: "6+", label: "Projects" },
               { value: "1", label: "Internship" },
-              { value: "1000+", label: "Lines of Code" },
+              { value: "3", label: "Team Projects" },
+              { value: "2", label: "Awards" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">

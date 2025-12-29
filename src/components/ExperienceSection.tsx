@@ -4,25 +4,58 @@ const ExperienceSection = () => {
   const experiences = [
     {
       type: "work",
-      title: "Engineering Intern",
-      company: "Company Name",
-      period: "Summer 2024",
+      title: "Electronics & Firmware Engineer",
+      company: "Formula SAE Electric",
+      period: "2024 – Present",
       description: [
-        "Describe your key responsibilities and achievements",
-        "Include specific technical work and technologies used",
-        "Quantify impact where possible",
+        "Replaced ATmega16M1 with STM32G441KBT6 on Charging Board, BMS Core, and Power Distribution Unit",
+        "Re-drew schematics in KiCad, updating footprints, pin mappings, and electrical connections",
+        "Updated PCB layouts and modified firmware for STM32, including CAN configuration and I/O behavior",
+        "Performed board bring-up and debugging for each redesigned board after MCU migration",
+      ],
+    },
+    {
+      type: "work",
+      title: "Unmanned Aircraft Systems Engineer",
+      company: "AERO Project Team",
+      period: "2024 – Present",
+      description: [
+        "Configured and customized ArduPilot firmware for fixed-wing aircraft",
+        "Wired and integrated motors, ESCs, servos, IMU, GPS, telemetry, and avionics",
+        "Mapped and validated RC transmitter controls; assisted with PID tuning and flight tests",
+      ],
+    },
+    {
+      type: "work",
+      title: "Combat Robotics Engineer",
+      company: "CRoG - Combat Robotics Club",
+      period: "2024 – Present",
+      description: [
+        "Designed and built an ant-weight combat robot from scratch",
+        "Implemented embedded control logic for drivetrain and weapon system",
+        "Iterated through mechanical/PCB redesigns based on destructive testing",
+      ],
+    },
+    {
+      type: "work",
+      title: "Research Intern",
+      company: "Vietnam Academy of Science and Technology",
+      period: "Summer 2023",
+      description: [
+        "Supported drone flight-dynamics research, robotic prototyping, and PCB fabrication",
+        "Performed graphene electroplating experiments to optimize conductivity",
       ],
     },
   ];
 
   const education = {
-    degree: "B.S. Electrical and Computer Engineering",
-    school: "Olin College of Engineering",
-    period: "Expected May 2028",
+    degree: "B.S. Engineering: Robotics",
+    school: "Franklin W. Olin College of Engineering",
+    period: "2025 – 2029",
     coursework: [
-      "Digital Systems Design",
       "Embedded Systems",
-      "Machine Learning",
+      "Robotics",
+      "PCB Design",
       "Control Systems",
     ],
   };
@@ -48,7 +81,7 @@ const ExperienceSection = () => {
                 <div className="p-3 rounded-xl bg-gradient-primary text-primary-foreground">
                   <Briefcase className="w-5 h-5" />
                 </div>
-                <h3 className="text-2xl font-semibold">Work Experience</h3>
+                <h3 className="text-2xl font-semibold">Experience</h3>
               </div>
 
               <div className="space-y-8">
@@ -119,10 +152,10 @@ const ExperienceSection = () => {
                 <h4 className="text-lg font-semibold mb-6">Technical Skills</h4>
                 <div className="space-y-4">
                   {[
-                    { category: "Languages", skills: "C/C++, Python, MATLAB" },
-                    { category: "Frameworks", skills: "ROS/ROS2, TensorFlow, OpenCV" },
-                    { category: "Tools", skills: "Git, Linux, KiCad, SolidWorks, Altium" },
-                    { category: "Hardware", skills: "STM32, ATmega, Raspberry Pi, Arduino" },
+                    { category: "Programming", skills: "Python, C++, Embedded C, MATLAB, ROS2" },
+                    { category: "Embedded", skills: "STM32, ATmega, ArduPilot, CAN bus, ESCs" },
+                    { category: "PCB & Electronics", skills: "KiCad, power distribution, mixed-signal debugging" },
+                    { category: "Tools", skills: "Oscilloscope, OpenCV, TensorFlow Lite, Gazebo, RViz" },
                   ].map((skill) => (
                     <div key={skill.category}>
                       <span className="text-sm font-mono text-primary">{skill.category}:</span>

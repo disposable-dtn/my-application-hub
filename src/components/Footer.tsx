@@ -8,16 +8,16 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Logo and tagline */}
             <div className="text-center md:text-left">
-              <span className="text-xl font-bold font-mono text-gradient">{"<YN />"}</span>
+              <span className="text-xl font-bold font-mono text-gradient">{"<DTN />"}</span>
               <p className="text-sm text-muted-foreground mt-2">
-                ECE Student • Aspiring Robotics Engineer
+                Robotics Engineering Student • Olin College
               </p>
             </div>
 
             {/* Social links */}
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/ductuannguyen"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all"
@@ -25,7 +25,7 @@ const Footer = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/yourprofile"
+                href="https://linkedin.com/in/ductuannguyen"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all"
@@ -33,7 +33,7 @@ const Footer = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:your.email@university.edu"
+                href="mailto:ductuannguyen.dtn@gmail.com"
                 className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all"
               >
                 <Mail className="w-5 h-5" />
@@ -47,7 +47,7 @@ const Footer = () => {
               Built with <Heart className="w-4 h-4 text-accent" /> using React & Tailwind
             </p>
             <p className="text-xs text-muted-foreground mt-2">
-              © {new Date().getFullYear()} Your Name. All rights reserved.
+              © {new Date().getFullYear()} Duc Tuan Nguyen. All rights reserved.
             </p>
           </div>
         </div>

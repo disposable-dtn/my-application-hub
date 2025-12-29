@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin, MapPin, Send } from "lucide-react";
+import { Mail, Github, Linkedin, MapPin, Send, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,7 +15,7 @@ const ContactSection = () => {
               Let's <span className="text-gradient">Connect</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              I'm actively seeking internship and full-time opportunities in robotics, embedded systems, 
+              I'm actively seeking internship opportunities in robotics, embedded systems, 
               and software engineering. Let's discuss how I can contribute to your team.
             </p>
           </div>
@@ -28,7 +28,7 @@ const ContactSection = () => {
                 
                 <div className="space-y-6">
                   <a 
-                    href="mailto:your.email@university.edu"
+                    href="mailto:ductuannguyen.dtn@gmail.com"
                     className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group"
                   >
                     <div className="p-3 rounded-xl bg-secondary group-hover:bg-primary/10 transition-colors">
@@ -37,13 +37,28 @@ const ContactSection = () => {
                     <div>
                       <p className="text-sm text-muted-foreground">Email</p>
                       <p className="font-medium text-foreground group-hover:text-primary transition-colors">
-                        your.email@university.edu
+                        ductuannguyen.dtn@gmail.com
                       </p>
                     </div>
                   </a>
 
                   <a 
-                    href="https://linkedin.com/in/yourprofile"
+                    href="tel:+19804460883"
+                    className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group"
+                  >
+                    <div className="p-3 rounded-xl bg-secondary group-hover:bg-primary/10 transition-colors">
+                      <Phone className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground">Phone</p>
+                      <p className="font-medium text-foreground group-hover:text-primary transition-colors">
+                        (980) 446-0883
+                      </p>
+                    </div>
+                  </a>
+
+                  <a 
+                    href="https://linkedin.com/in/ductuannguyen"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group"
@@ -54,13 +69,13 @@ const ContactSection = () => {
                     <div>
                       <p className="text-sm text-muted-foreground">LinkedIn</p>
                       <p className="font-medium text-foreground group-hover:text-primary transition-colors">
-                        /in/yourprofile
+                        /in/ductuannguyen
                       </p>
                     </div>
                   </a>
 
                   <a 
-                    href="https://github.com/yourusername"
+                    href="https://github.com/ductuannguyen"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group"
@@ -71,7 +86,7 @@ const ContactSection = () => {
                     <div>
                       <p className="text-sm text-muted-foreground">GitHub</p>
                       <p className="font-medium text-foreground group-hover:text-primary transition-colors">
-                        @yourusername
+                        @ductuannguyen
                       </p>
                     </div>
                   </a>
@@ -83,7 +98,7 @@ const ContactSection = () => {
                     <div>
                       <p className="text-sm text-muted-foreground">Location</p>
                       <p className="font-medium text-foreground">
-                        City, State • Open to Relocation
+                        Massachusetts • Open to Relocation
                       </p>
                     </div>
                   </div>
@@ -97,7 +112,7 @@ const ContactSection = () => {
                   <span className="font-semibold">Available for Opportunities</span>
                 </div>
                 <p className="text-primary-foreground/80 text-sm">
-                  Currently seeking Summer 2025 internships and Fall 2026 full-time positions.
+                  Currently seeking Summer 2025 internships in robotics, embedded systems, and software engineering.
                 </p>
               </div>
             </div>
