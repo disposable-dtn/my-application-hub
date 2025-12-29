@@ -4,40 +4,26 @@ const ExperienceSection = () => {
   const experiences = [
     {
       type: "work",
-      title: "Robotics Engineering Intern",
-      company: "Tech Company Name",
-      period: "May 2024 - Aug 2024",
+      title: "Engineering Intern",
+      company: "Company Name",
+      period: "Summer 2024",
       description: [
-        "Developed motion planning algorithms for autonomous mobile robots using C++ and ROS2",
-        "Implemented sensor fusion pipeline integrating LIDAR, IMU, and camera data",
-        "Reduced navigation latency by 40% through algorithm optimization",
-      ],
-    },
-    {
-      type: "work",
-      title: "Embedded Systems Intern",
-      company: "Electronics Company",
-      period: "May 2023 - Aug 2023",
-      description: [
-        "Designed firmware for STM32 microcontrollers in automotive applications",
-        "Created automated testing framework reducing QA time by 30%",
-        "Collaborated with hardware team on PCB bring-up and debugging",
+        "Describe your key responsibilities and achievements",
+        "Include specific technical work and technologies used",
+        "Quantify impact where possible",
       ],
     },
   ];
 
   const education = {
     degree: "B.S. Electrical and Computer Engineering",
-    school: "Your University Name",
-    period: "Expected May 2026",
-    gpa: "3.85/4.0",
+    school: "Olin College of Engineering",
+    period: "Expected May 2028",
     coursework: [
       "Digital Systems Design",
       "Embedded Systems",
-      "Computer Architecture",
       "Machine Learning",
       "Control Systems",
-      "Signal Processing",
     ],
   };
 
@@ -78,7 +64,7 @@ const ExperienceSection = () => {
                         <Calendar className="w-4 h-4" />
                         {exp.period}
                       </div>
-                      <h4 className="text-xl font-semibold mb-1 group-hover:text-primary transition-colors">
+                      <h4 className="text-xl font-semibold mb-1 text-foreground group-hover:text-primary transition-colors">
                         {exp.title}
                       </h4>
                       <p className="text-primary font-medium mb-4">{exp.company}</p>
@@ -111,8 +97,7 @@ const ExperienceSection = () => {
                   {education.period}
                 </div>
                 <h4 className="text-xl font-semibold mb-2">{education.degree}</h4>
-                <p className="text-primary font-medium mb-2">{education.school}</p>
-                <p className="text-muted-foreground mb-6">GPA: {education.gpa}</p>
+                <p className="text-primary font-medium mb-6">{education.school}</p>
 
                 <h5 className="text-sm font-mono text-muted-foreground uppercase tracking-wider mb-4">
                   Relevant Coursework
@@ -134,10 +119,10 @@ const ExperienceSection = () => {
                 <h4 className="text-lg font-semibold mb-6">Technical Skills</h4>
                 <div className="space-y-4">
                   {[
-                    { category: "Languages", skills: "C/C++, Python, Verilog, JavaScript/TypeScript" },
-                    { category: "Frameworks", skills: "ROS/ROS2, TensorFlow, React, Node.js" },
-                    { category: "Tools", skills: "Git, Docker, Linux, Vivado, KiCad, SolidWorks" },
-                    { category: "Hardware", skills: "STM32, ESP32, Raspberry Pi, Arduino, FPGA" },
+                    { category: "Languages", skills: "C/C++, Python, MATLAB" },
+                    { category: "Frameworks", skills: "ROS/ROS2, TensorFlow, OpenCV" },
+                    { category: "Tools", skills: "Git, Linux, KiCad, SolidWorks, Altium" },
+                    { category: "Hardware", skills: "STM32, ATmega, Raspberry Pi, Arduino" },
                   ].map((skill) => (
                     <div key={skill.category}>
                       <span className="text-sm font-mono text-primary">{skill.category}:</span>
