@@ -30,7 +30,7 @@ const HeroSection = () => {
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 animate-slide-up"
             style={{ animationDelay: "0.2s" }}
           >
-            <span className="block text-foreground">Your Name</span>
+            <span className="block text-foreground">Duc Tuan Nguyen</span>
             <span className="block text-gradient mt-2">ECE Student</span>
           </h1>
 
@@ -50,7 +50,7 @@ const HeroSection = () => {
             className="flex flex-wrap justify-center gap-3 mb-12 animate-slide-up"
             style={{ animationDelay: "0.5s" }}
           >
-            {["C/C++", "Python", "ROS", "FPGA", "PCB Design", "KiCad", "Embedded"].map((tech) => (
+            {["Python", "C++", "Embedded C", "ROS2", "STM32", "KiCad", "ArduPilot"].map((tech) => (
               <span
                 key={tech}
                 className="px-4 py-2 text-sm font-mono bg-secondary/50 text-secondary-foreground rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
@@ -89,7 +89,7 @@ const HeroSection = () => {
             style={{ animationDelay: "0.8s" }}
           >
             <a 
-              href="https://github.com" 
+              href="https://github.com/ductuannguyen" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-xl bg-secondary/50 text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
@@ -97,7 +97,7 @@ const HeroSection = () => {
               <Github className="w-6 h-6" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/ductuannguyen" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-xl bg-secondary/50 text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
@@ -105,7 +105,7 @@ const HeroSection = () => {
               <Linkedin className="w-6 h-6" />
             </a>
             <a 
-              href="mailto:your.email@university.edu"
+              href="mailto:ductuannguyen.dtn@gmail.com"
               className="p-3 rounded-xl bg-secondary/50 text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
             >
               <Mail className="w-6 h-6" />

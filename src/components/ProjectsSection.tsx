@@ -1,38 +1,51 @@
-import { ExternalLink, Github, Cpu, Bot, Code2, CircuitBoard } from "lucide-react";
+import { ExternalLink, Github, Bot, Code2, CircuitBoard, Plane, Trophy, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Autonomous Robot Platform",
-      description: "Designed and built a 4-wheeled autonomous robot with LIDAR-based navigation, implementing SLAM algorithms using ROS2 and C++. Achieved real-time obstacle avoidance at 10Hz update rate.",
-      tags: ["ROS2", "C++", "Python", "LIDAR", "SLAM"],
+      title: "Tobot - Autonomous Tennis Ball Collector",
+      description: "Built an autonomous robot using ROS2 with SLAM and NAV2 for navigation. Developed in Gazebo and visualized with RViz for real-time path planning and obstacle avoidance.",
+      tags: ["ROS2", "SLAM", "NAV2", "Gazebo", "Python"],
       icon: Bot,
       featured: true,
       github: "#",
-      demo: "#",
     },
     {
       title: "Formula SAE PCB Design",
-      description: "Designed custom PCBs using KiCad for Formula SAE electric vehicle, including power distribution and sensor interface boards.",
-      tags: ["KiCad", "PCB Design", "Altium", "Hardware"],
+      description: "Redesigned three subsystem boards (Charging Board, BMS Core, PDU) in KiCad, migrating from ATmega16M1 to STM32G441KBT6 with updated schematics and PCB layouts.",
+      tags: ["KiCad", "STM32", "PCB Design", "CAN bus"],
       icon: CircuitBoard,
       featured: true,
       github: "#",
     },
     {
-      title: "Smart Home IoT System",
-      description: "Built a comprehensive IoT system using ATmega microcontrollers, featuring temperature monitoring, automated lighting, and sensor data logging.",
-      tags: ["ATmega", "C", "MQTT", "Embedded"],
-      icon: Cpu,
+      title: "AI Fall Detector - Companion Catch",
+      description: "Developed an LSTM-based fall detection system using OpenCV and MediaPipe for real-time pose estimation. Winner of the Congressional App Challenge.",
+      tags: ["Python", "OpenCV", "MediaPipe", "LSTM"],
+      icon: Trophy,
+      featured: true,
       github: "#",
-      demo: "#",
     },
     {
-      title: "Computer Vision Pipeline",
-      description: "Developed a real-time pose detection and tracking system using OpenCV and TensorFlow, achieving 30 FPS performance on edge devices for robotics applications.",
-      tags: ["Python", "OpenCV", "TensorFlow", "Raspberry Pi"],
+      title: "MIT Beaver Works - WatchDog Tracker",
+      description: "Built a GPS-enabled pet tracker with complete hardware and firmware integration for real-time location monitoring.",
+      tags: ["Embedded C", "GPS", "Hardware", "Firmware"],
       icon: Code2,
+      github: "#",
+    },
+    {
+      title: "Triboelectric Nanogenerator Research",
+      description: "Designed energy-harvesting nanogenerators for sustainable power generation. Won Gold at the International Advanced Innovation Competition.",
+      tags: ["Research", "Energy Harvesting", "Hardware"],
+      icon: Zap,
+      featured: true,
+    },
+    {
+      title: "Fixed-Wing UAV System",
+      description: "Configured ArduPilot firmware for fixed-wing aircraft. Integrated motors, ESCs, servos, IMU, GPS, and telemetry systems with PID tuning.",
+      tags: ["ArduPilot", "UAV", "Embedded", "Avionics"],
+      icon: Plane,
       github: "#",
     },
   ];
@@ -48,13 +61,13 @@ const ProjectsSection = () => {
               Featured <span className="text-gradient">Projects</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              A selection of projects showcasing my experience in robotics, embedded systems, and software development.
+              A selection of projects showcasing my experience in robotics, embedded systems, and hardware design.
             </p>
           </div>
 
           {/* Projects grid */}
           <div className="grid md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <article
                 key={project.title}
                 className={`group relative rounded-2xl border border-border bg-card overflow-hidden hover:border-primary/30 hover:glow-sm transition-all duration-500 ${
@@ -74,14 +87,6 @@ const ProjectsSection = () => {
                           className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all"
                         >
                           <Github className="w-5 h-5" />
-                        </a>
-                      )}
-                      {project.demo && (
-                        <a
-                          href={project.demo}
-                          className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all"
-                        >
-                          <ExternalLink className="w-5 h-5" />
                         </a>
                       )}
                     </div>
