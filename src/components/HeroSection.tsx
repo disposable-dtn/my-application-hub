@@ -50,7 +50,7 @@ const HeroSection = () => {
             className="flex flex-wrap justify-center gap-3 mb-12 animate-slide-up"
             style={{ animationDelay: "0.5s" }}
           >
-            {["C/C++", "Python", "ROS", "FPGA", "PCB Design", "React", "Embedded"].map((tech) => (
+            {["C/C++", "Python", "ROS", "FPGA", "PCB Design", "KiCad", "Embedded"].map((tech) => (
               <span
                 key={tech}
                 className="px-4 py-2 text-sm font-mono bg-secondary/50 text-secondary-foreground rounded-lg border border-border hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"

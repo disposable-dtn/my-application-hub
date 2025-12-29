@@ -13,24 +13,24 @@ const ProjectsSection = () => {
       demo: "#",
     },
     {
-      title: "FPGA-Based Signal Processor",
-      description: "Implemented a real-time digital signal processing system on Xilinx Artix-7 FPGA for audio filtering applications. Designed custom Verilog modules for FIR and IIR filters.",
-      tags: ["Verilog", "FPGA", "DSP", "Vivado"],
+      title: "Formula SAE PCB Design",
+      description: "Designed custom PCBs using KiCad for Formula SAE electric vehicle, including power distribution and sensor interface boards.",
+      tags: ["KiCad", "PCB Design", "Altium", "Hardware"],
       icon: CircuitBoard,
       featured: true,
       github: "#",
     },
     {
       title: "Smart Home IoT System",
-      description: "Built a comprehensive IoT system using ESP32 microcontrollers, featuring temperature monitoring, automated lighting, and a React-based dashboard with real-time data visualization.",
-      tags: ["ESP32", "React", "MQTT", "Node.js"],
+      description: "Built a comprehensive IoT system using ATmega microcontrollers, featuring temperature monitoring, automated lighting, and sensor data logging.",
+      tags: ["ATmega", "C", "MQTT", "Embedded"],
       icon: Cpu,
       github: "#",
       demo: "#",
     },
     {
       title: "Computer Vision Pipeline",
-      description: "Developed a real-time object detection and tracking system using OpenCV and TensorFlow, achieving 30 FPS performance on edge devices for robotics applications.",
+      description: "Developed a real-time pose detection and tracking system using OpenCV and TensorFlow, achieving 30 FPS performance on edge devices for robotics applications.",
       tags: ["Python", "OpenCV", "TensorFlow", "Raspberry Pi"],
       icon: Code2,
       github: "#",
@@ -87,7 +87,7 @@ const ProjectsSection = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-2xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-2xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed mb-6">
