@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -19,7 +21,7 @@
     --primary-foreground: 0 0% 100%;
 
     --secondary: 220 15% 92%;
-    --secondary-foreground: 220 25% 15%;
+    --secondary-foreground: 215 20.2247% 65.098%;
 
     --muted: 220 15% 92%;
     --muted-foreground: 220 10% 45%;
@@ -100,7 +102,7 @@
   .font-display {
     font-family: 'Space Grotesk', system-ui, sans-serif;
   }
-  
+
   .font-mono {
     font-family: 'JetBrains Mono', monospace;
   }
