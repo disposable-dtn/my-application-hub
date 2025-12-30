@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Tobot - Autonomous Tennis Ball Collector",
-      description: "Built an autonomous robot using ROS2 with SLAM and NAV2 for navigation. Developed in Gazebo and visualized with RViz for real-time path planning and obstacle avoidance.",
-      tags: ["ROS2", "SLAM", "NAV2", "Gazebo", "Python"],
-      icon: Bot,
+      title: "Fixed-Wing UAV System",
+      description: "Configured ArduPilot firmware for fixed-wing aircraft. Integrated motors, ESCs, servos, IMU, GPS, and telemetry systems with PID tuning.",
+      tags: ["ArduPilot", "UAV", "Embedded", "Avionics"],
+      icon: Plane,
       featured: true,
       github: "#",
     },
@@ -16,6 +16,14 @@ const ProjectsSection = () => {
       description: "Redesigned three subsystem boards (Charging Board, BMS Core, PDU) in KiCad, migrating from ATmega16M1 to STM32G441KBT6 with updated schematics and PCB layouts.",
       tags: ["KiCad", "STM32", "PCB Design", "CAN bus"],
       icon: CircuitBoard,
+      featured: true,
+      github: "#",
+    },
+    {
+      title: "Tobot - Autonomous Tennis Ball Collector",
+      description: "Built an autonomous robot using ROS2 with SLAM and NAV2 for navigation. Developed in Gazebo and visualized with RViz for real-time path planning and obstacle avoidance.",
+      tags: ["ROS2", "SLAM", "NAV2", "Gazebo", "Python"],
+      icon: Bot,
       featured: true,
       github: "#",
     },
@@ -35,17 +43,11 @@ const ProjectsSection = () => {
       github: "#",
     },
     {
-      title: "Triboelectric Nanogenerator Research",
-      description: "Designed energy-harvesting nanogenerators for sustainable power generation. Won Gold at the International Advanced Innovation Competition.",
-      tags: ["Research", "Energy Harvesting", "Hardware"],
+      title: "CRoG - Combat Robotics",
+      description: "Designed and built 3lb and 15lb combat robots. Iterated designs using Fusion 360 for CAD modeling and manufactured components with 3D printing and laser cutting.",
+      tags: ["CAD", "Fusion 360", "3D Printing", "Mechanical"],
       icon: Zap,
       featured: true,
-    },
-    {
-      title: "Fixed-Wing UAV System",
-      description: "Configured ArduPilot firmware for fixed-wing aircraft. Integrated motors, ESCs, servos, IMU, GPS, and telemetry systems with PID tuning.",
-      tags: ["ArduPilot", "UAV", "Embedded", "Avionics"],
-      icon: Plane,
       github: "#",
     },
   ];

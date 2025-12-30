@@ -58,7 +58,7 @@ const ContactSection = () => {
                   </a>
 
                   <a 
-                    href="https://linkedin.com/in/ductuannguyen"
+                    href="https://www.linkedin.com/in/ducnguyen-dtn/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group"
@@ -69,13 +69,13 @@ const ContactSection = () => {
                     <div>
                       <p className="text-sm text-muted-foreground">LinkedIn</p>
                       <p className="font-medium text-foreground group-hover:text-primary transition-colors">
-                        /in/ductuannguyen
+                        /in/ducnguyen-dtn
                       </p>
                     </div>
                   </a>
 
                   <a 
-                    href="https://github.com/ductuannguyen"
+                    href="https://github.com/ductnguyen-dtn"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group"
@@ -86,7 +86,7 @@ const ContactSection = () => {
                     <div>
                       <p className="text-sm text-muted-foreground">GitHub</p>
                       <p className="font-medium text-foreground group-hover:text-primary transition-colors">
-                        @ductuannguyen
+                        @ductnguyen-dtn
                       </p>
                     </div>
                   </a>

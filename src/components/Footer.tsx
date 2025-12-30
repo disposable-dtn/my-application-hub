@@ -25,7 +25,7 @@ const Footer = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/ductuannguyen"
+                href="https://www.linkedin.com/in/ducnguyen-dtn/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all"
@@ -47,7 +47,7 @@ const Footer = () => {
               Built with <Heart className="w-4 h-4 text-accent" /> using React & Tailwind
             </p>
             <p className="text-xs text-muted-foreground mt-2">
-              © {new Date().getFullYear()} Duc Tuan Nguyen. All rights reserved.
+              © {new Date().getFullYear()} Duc Nguyen. All rights reserved.
             </p>
           </div>
         </div>
