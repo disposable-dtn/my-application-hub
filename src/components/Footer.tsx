@@ -17,7 +17,7 @@ const Footer = () => {
             {/* Social links */}
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com/ductuannguyen"
+                href="https://github.com/ductnguyen-dtn"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all"
