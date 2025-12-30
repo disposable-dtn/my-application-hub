@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Bot, Code2, CircuitBoard, Plane, Trophy, Zap } from "lucide-react";
+import { Github, Bot, Code2, CircuitBoard, Plane, Trophy, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ProjectsSection = () => {
@@ -43,9 +43,9 @@ const ProjectsSection = () => {
       github: "#",
     },
     {
-      title: "CRoG - Combat Robotics",
-      description: "Designed and built 3lb and 15lb combat robots. Iterated designs using Onshape for CAD modeling and manufactured components with 3D printing and laser cutting.",
-      tags: ["CAD", "Onshape", "3D Printing", "Mechanical"],
+      title: "Triboelectric Nanogenerator Research",
+      description: "Designed energy-harvesting nanogenerators for sustainable power generation. Won Gold at International Advanced Innovation Competition.",
+      tags: ["Research", "Energy Harvesting", "Nanotechnology"],
       icon: Zap,
       featured: true,
       github: "#",
