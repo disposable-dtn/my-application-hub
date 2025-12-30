@@ -6,7 +6,7 @@ const ExperienceSection = () => {
       type: "work",
       title: "Electronics & Firmware Member",
       company: "Formula SAE Electric",
-      period: "2024 – Present",
+      period: "2025 – Present",
       description: [
         "Replaced ATmega16M1 with STM32G441KBT6 on Charging Board, BMS Core, and Power Distribution Unit",
         "Re-drew schematics in KiCad, updating footprints, pin mappings, and electrical connections",
@@ -18,7 +18,7 @@ const ExperienceSection = () => {
       type: "work",
       title: "Unmanned Aircraft Systems Member",
       company: "AERO Project Team",
-      period: "2024 – Present",
+      period: "2025 – Present",
       description: [
         "Configured and customized ArduPilot firmware for fixed-wing aircraft",
         "Wired and integrated motors, ESCs, servos, IMU, GPS, telemetry, and avionics",
@@ -29,7 +29,7 @@ const ExperienceSection = () => {
       type: "work",
       title: "Combat Robotics Member",
       company: "CRoG - Combat Robotics Club",
-      period: "2024 – Present",
+      period: "2025 – Present",
       description: [
         "Designed and built an ant-weight combat robot from scratch",
         "Implemented embedded control logic for drivetrain and weapon system",
@@ -40,7 +40,7 @@ const ExperienceSection = () => {
       type: "work",
       title: "Research Intern",
       company: "Vietnam Academy of Science and Technology",
-      period: "Summer 2023",
+      period: "2023",
       description: [
         "Supported drone flight-dynamics research, robotic prototyping, and PCB fabrication",
         "Performed graphene electroplating experiments to optimize conductivity",
