@@ -4,7 +4,7 @@ const ExperienceSection = () => {
   const experiences = [
     {
       type: "work",
-      title: "Electronics & Firmware Engineer",
+      title: "Electronics & Firmware Member",
       company: "Formula SAE Electric",
       period: "2024 – Present",
       description: [
@@ -16,7 +16,7 @@ const ExperienceSection = () => {
     },
     {
       type: "work",
-      title: "Unmanned Aircraft Systems Engineer",
+      title: "Unmanned Aircraft Systems Member",
       company: "AERO Project Team",
       period: "2024 – Present",
       description: [
@@ -27,7 +27,7 @@ const ExperienceSection = () => {
     },
     {
       type: "work",
-      title: "Combat Robotics Engineer",
+      title: "Combat Robotics Member",
       company: "CRoG - Combat Robotics Club",
       period: "2024 – Present",
       description: [
@@ -49,7 +49,7 @@ const ExperienceSection = () => {
   ];
 
   const education = {
-    degree: "B.S. Engineering: Robotics",
+    degree: "B.S. Electrical and Computer Engineering",
     school: "Franklin W. Olin College of Engineering",
     period: "2025 – 2029",
     coursework: [
