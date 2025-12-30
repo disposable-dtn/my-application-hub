@@ -30,7 +30,7 @@ const HeroSection = () => {
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 animate-slide-up"
             style={{ animationDelay: "0.2s" }}
           >
-            <span className="block text-foreground">Duc Tuan Nguyen</span>
+            <span className="block text-foreground">Duc Nguyen</span>
             <span className="block text-gradient mt-2">ECE Student</span>
           </h1>
 
@@ -103,7 +103,7 @@ const HeroSection = () => {
               <Github className="w-6 h-6" />
             </a>
             <a 
-              href="https://linkedin.com/in/ductuannguyen" 
+              href="https://www.linkedin.com/in/ducnguyen-dtn/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-xl bg-secondary/50 text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
