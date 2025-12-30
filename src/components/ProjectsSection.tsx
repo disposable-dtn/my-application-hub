@@ -44,8 +44,8 @@ const ProjectsSection = () => {
     },
     {
       title: "CRoG - Combat Robotics",
-      description: "Designed and built 3lb and 15lb combat robots. Iterated designs using Fusion 360 for CAD modeling and manufactured components with 3D printing and laser cutting.",
-      tags: ["CAD", "Fusion 360", "3D Printing", "Mechanical"],
+      description: "Designed and built 3lb and 15lb combat robots. Iterated designs using Onshape for CAD modeling and manufactured components with 3D printing and laser cutting.",
+      tags: ["CAD", "Onshape", "3D Printing", "Mechanical"],
       icon: Zap,
       featured: true,
       github: "#",

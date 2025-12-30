@@ -58,8 +58,11 @@ const Navigation = () => {
             <Button
               size="sm"
               className="bg-gradient-primary text-primary-foreground hover:opacity-90"
+              asChild
             >
-              Resume
+              <a href="https://drive.google.com/file/d/1E6Oz07__zwQ1SKsjnBZnkN3wpHe0hJJM/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                Resume
+              </a>
             </Button>
           </div>
 
@@ -86,8 +89,10 @@ const Navigation = () => {
                 {link.label}
               </button>
             ))}
-            <Button className="w-full bg-gradient-primary text-primary-foreground">
-              Resume
+            <Button className="w-full bg-gradient-primary text-primary-foreground" asChild>
+              <a href="https://drive.google.com/file/d/1E6Oz07__zwQ1SKsjnBZnkN3wpHe0hJJM/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                Resume
+              </a>
             </Button>
           </div>
         </div>
