@@ -65,13 +65,19 @@ const HeroSection = () => {
             className="flex flex-wrap items-center justify-center gap-4 mb-16 animate-slide-up"
             style={{ animationDelay: "0.6s" }}
           >
-            <Button 
-              size="lg" 
-              className="bg-gradient-primary text-primary-foreground hover:opacity-90 glow-sm px-8 gap-2"
+            <a 
+              href="https://drive.google.com/file/d/1E6Oz07__zwQ1SKsjnBZnkN3wpHe0hJJM/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <FileText className="w-4 h-4" />
-              View Resume
-            </Button>
+              <Button 
+                size="lg" 
+                className="bg-gradient-primary text-primary-foreground hover:opacity-90 glow-sm px-8 gap-2"
+              >
+                <FileText className="w-4 h-4" />
+                View Resume
+              </Button>
+            </a>
             <Button 
               size="lg" 
               variant="outline"
@@ -89,7 +95,7 @@ const HeroSection = () => {
             style={{ animationDelay: "0.8s" }}
           >
             <a 
-              href="https://github.com/ductuannguyen" 
+              href="https://github.com/ductnguyen-dtn" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-xl bg-secondary/50 text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
