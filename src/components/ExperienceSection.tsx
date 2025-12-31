@@ -49,6 +49,8 @@ const ExperienceSection = () => {
         "Supported drone flight-dynamics research, robotic prototyping, and PCB fabrication",
         "Performed graphene electroplating experiments to optimize conductivity",
       ],
+      linkedin: "https://www.linkedin.com/company/vietnam-academy-of-science-and-technology/",
+      website: "https://vast.gov.vn/web/vietnam-academy-of-science-and-technology",
     },
   ];
 
