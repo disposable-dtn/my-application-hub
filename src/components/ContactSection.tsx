@@ -24,7 +24,7 @@ const ContactSection = () => {
             {/* Contact info */}
             <div className="space-y-8">
               <div className="p-8 rounded-2xl bg-card border border-border">
-                <h3 className="text-xl font-semibold mb-6">Get in Touch</h3>
+                <h3 className="text-xl font-semibold mb-6 text-foreground">Get in Touch</h3>
                 
                 <div className="space-y-6">
                   <a 
