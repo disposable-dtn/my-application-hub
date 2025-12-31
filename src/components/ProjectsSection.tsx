@@ -9,7 +9,7 @@ const ProjectsSection = () => {
       tags: ["ArduPilot", "UAV", "Embedded", "Avionics"],
       icon: Plane,
       featured: true,
-      github: "#",
+      github: "https://github.com/Olin-Aerospace",
     },
     {
       title: "Formula SAE PCB Design",
@@ -17,7 +17,7 @@ const ProjectsSection = () => {
       tags: ["KiCad", "STM32", "PCB Design", "CAN bus"],
       icon: CircuitBoard,
       featured: true,
-      github: "#",
+      github: "https://github.com/olin-electric-motorsports",
     },
     {
       title: "Tobot - Autonomous Tennis Ball Collector",
@@ -25,7 +25,7 @@ const ProjectsSection = () => {
       tags: ["ROS2", "SLAM", "NAV2", "Gazebo", "Python"],
       icon: Bot,
       featured: true,
-      github: "#",
+      github: "https://github.com/ductnguyen-dtn/tobot",
     },
     {
       title: "AI Fall Detector - Companion Catch",
