@@ -1,10 +1,10 @@
-import { Briefcase, GraduationCap, Calendar } from "lucide-react";
+import { Briefcase, GraduationCap, Calendar, Linkedin, ExternalLink } from "lucide-react";
 
 const ExperienceSection = () => {
   const experiences = [
     {
       type: "work",
-      title: "Electronics & Firmware Member",
+      title: "Electronics & Firmware Engineer",
       company: "Formula SAE Electric",
       period: "2025 – Present",
       description: [
@@ -13,10 +13,12 @@ const ExperienceSection = () => {
         "Updated PCB layouts and modified firmware for STM32, including CAN configuration and I/O behavior",
         "Performed board bring-up and debugging for each redesigned board after MCU migration",
       ],
+      linkedin: "https://www.linkedin.com/company/olin-electric-motorsports/",
+      website: "https://olinelectricmotorsports.com",
     },
     {
       type: "work",
-      title: "Unmanned Aircraft Systems Member",
+      title: "Unmanned Aircraft Systems Engineer",
       company: "AERO Project Team",
       period: "2025 – Present",
       description: [
@@ -24,10 +26,12 @@ const ExperienceSection = () => {
         "Wired and integrated motors, ESCs, servos, IMU, GPS, telemetry, and avionics",
         "Mapped and validated RC transmitter controls; assisted with PID tuning and flight tests",
       ],
+      linkedin: "https://www.linkedin.com/company/olin-aero/",
+      website: "https://www.olindbf.com",
     },
     {
       type: "work",
-      title: "Combat Robotics Member",
+      title: "Combat Robotics Engineer",
       company: "CRoG - Combat Robotics Club",
       period: "2025 – Present",
       description: [
@@ -69,7 +73,7 @@ const ExperienceSection = () => {
           {/* Section header */}
           <div className="text-center mb-16">
             <span className="text-sm font-mono text-primary uppercase tracking-wider">Background</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-foreground">
               Experience & <span className="text-gradient">Education</span>
             </h2>
           </div>
@@ -100,7 +104,29 @@ const ExperienceSection = () => {
                       <h4 className="text-xl font-semibold mb-1 text-foreground group-hover:text-primary transition-colors">
                         {exp.title}
                       </h4>
-                      <p className="text-primary font-medium mb-4">{exp.company}</p>
+                      <div className="flex items-center gap-3 mb-4">
+                        <p className="text-primary font-medium">{exp.company}</p>
+                        {exp.linkedin && (
+                          <a
+                            href={exp.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-1.5 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all"
+                          >
+                            <Linkedin className="w-4 h-4" />
+                          </a>
+                        )}
+                        {exp.website && (
+                          <a
+                            href={exp.website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-1.5 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all"
+                          >
+                            <ExternalLink className="w-4 h-4" />
+                          </a>
+                        )}
+                      </div>
                       <ul className="space-y-2">
                         {exp.description.map((item, i) => (
                           <li key={i} className="text-muted-foreground text-sm flex items-start gap-2">

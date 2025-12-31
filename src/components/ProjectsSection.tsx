@@ -33,7 +33,7 @@ const ProjectsSection = () => {
       tags: ["Python", "OpenCV", "MediaPipe", "LSTM"],
       icon: Trophy,
       featured: true,
-      github: "#",
+      github: "https://github.com/ductnguyen-dtn/Companion-Catch",
     },
     {
       title: "MIT Beaver Works - WatchDog Tracker",
@@ -43,9 +43,9 @@ const ProjectsSection = () => {
       github: "#",
     },
     {
-      title: "Triboelectric Nanogenerator Research",
-      description: "Designed energy-harvesting nanogenerators for sustainable power generation. Won Gold at International Advanced Innovation Competition.",
-      tags: ["Research", "Energy Harvesting", "Nanotechnology"],
+      title: "CRoG - Combat Robotics",
+      description: "Designed and built 3lb and 15lb combat robots. Iterated designs using Onshape for CAD modeling and manufactured components with 3D printing and laser cutting.",
+      tags: ["CAD", "Onshape", "3D Printing", "Mechanical"],
       icon: Zap,
       featured: true,
       github: "#",
@@ -59,7 +59,7 @@ const ProjectsSection = () => {
           {/* Section header */}
           <div className="text-center mb-16">
             <span className="text-sm font-mono text-primary uppercase tracking-wider">Portfolio</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-foreground">
               Featured <span className="text-gradient">Projects</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

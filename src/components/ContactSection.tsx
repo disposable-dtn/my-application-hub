@@ -11,7 +11,7 @@ const ContactSection = () => {
           {/* Section header */}
           <div className="text-center mb-16">
             <span className="text-sm font-mono text-primary uppercase tracking-wider">Contact</span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 text-foreground">
               Let's <span className="text-gradient">Connect</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
