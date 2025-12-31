@@ -1,4 +1,4 @@
-import { Github, Bot, Code2, CircuitBoard, Plane, Trophy, Zap } from "lucide-react";
+import { Github, Bot, Code2, CircuitBoard, Plane, Trophy, Zap, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ProjectsSection = () => {
@@ -26,6 +26,7 @@ const ProjectsSection = () => {
       icon: Bot,
       featured: true,
       github: "https://github.com/ductnguyen-dtn/tobot",
+      website: "https://bit.ly/companion-catch",
     },
     {
       title: "AI Fall Detector - Companion Catch",
@@ -83,9 +84,21 @@ const ProjectsSection = () => {
                       <project.icon className="w-6 h-6" />
                     </div>
                     <div className="flex gap-2">
-                      {project.github && (
+                      {project.website && (
+                        <a
+                          href={project.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all"
+                        >
+                          <Globe className="w-5 h-5" />
+                        </a>
+                      )}
+                      {project.github && project.github !== "#" && (
                         <a
                           href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all"
                         >
                           <Github className="w-5 h-5" />
