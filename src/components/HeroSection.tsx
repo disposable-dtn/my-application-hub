@@ -66,7 +66,7 @@ const HeroSection = () => {
             style={{ animationDelay: "0.6s" }}
           >
             <a 
-              href="https://drive.google.com/file/d/1E6Oz07__zwQ1SKsjnBZnkN3wpHe0hJJM/view?usp=sharing"
+              href="https://drive.google.com/file/d/1RhSll71dIIE8bKDoElAwri0bVT0XY9GJ/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
