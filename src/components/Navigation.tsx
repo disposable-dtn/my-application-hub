@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import ResumeModalButton from "@/components/ResumeModalButton";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,10 +30,8 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-sm"
-          : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
+        isScrolled ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="container px-6">
@@ -40,7 +39,7 @@ const Navigation = () => {
           {/* Logo */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="text-xl font-bold font-mono text-gradient hover:opacity-80 transition-opacity"
+            className="text-xl font-bold font-mono text-gradient hover:opacity-90 transition-opacity duration-500"
           >
             {"<DTN />"}
           </button>
@@ -51,21 +50,21 @@ const Navigation = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-500"
               >
                 {link.label}
               </button>
             ))}
             <ThemeToggle />
-            <Button
-              size="sm"
-              className="bg-gradient-primary text-primary-foreground hover:opacity-90"
-              asChild
-            >
-              <a href="https://drive.google.com/file/d/1RhSll71dIIE8bKDoElAwri0bVT0XY9GJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                Resume
-              </a>
-            </Button>
+            <ResumeModalButton
+              triggerText={
+                <>
+                  <FileText className="h-4 w-4" />
+                  Resume
+                </>
+              }
+              triggerProps={{ size: "sm", className: "bg-gradient-primary text-primary-foreground hover:opacity-90 gap-2" }}
+            />
           </div>
 
           {/* Mobile menu button */}
@@ -86,18 +85,22 @@ const Navigation = () => {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left py-3 text-lg font-medium text-foreground hover:text-primary transition-colors"
+                className="block w-full text-left py-3 text-lg font-medium text-foreground hover:text-foreground transition-colors duration-500"
               >
                 {link.label}
               </button>
             ))}
             <div className="flex items-center gap-4">
               <ThemeToggle />
-              <Button className="flex-1 bg-gradient-primary text-primary-foreground" asChild>
-                <a href="https://drive.google.com/file/d/1RhSll71dIIE8bKDoElAwri0bVT0XY9GJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                  Resume
-                </a>
-              </Button>
+              <ResumeModalButton
+                triggerText={
+                  <>
+                    <FileText className="h-4 w-4" />
+                    Resume
+                  </>
+                }
+                triggerProps={{ className: "flex-1 bg-gradient-primary text-primary-foreground hover:opacity-90 gap-2" }}
+              />
             </div>
           </div>
         </div>

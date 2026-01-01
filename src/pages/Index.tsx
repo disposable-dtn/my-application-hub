@@ -11,16 +11,16 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Your Name | ECE Student & Aspiring Robotics Engineer</title>
-        <meta 
-          name="description" 
-          content="Electrical and Computer Engineering student specializing in robotics, embedded systems, and software engineering. Seeking internship and full-time opportunities." 
+        <title>DTN | ECE Student</title>
+        <meta
+          name="description"
+          content="DTN portfolio — Electrical and Computer Engineering student focused on robotics, embedded systems, and software engineering."
         />
-        <meta name="keywords" content="robotics, electrical engineering, computer engineering, embedded systems, software engineer, ECE, intern" />
-        <link rel="canonical" href="https://yourname.dev" />
+        <meta name="keywords" content="DTN, ECE student, robotics, embedded systems, software engineering" />
+        <link rel="canonical" href="https://ductnguyen-dtn.com" />
       </Helmet>
 
-      <div className="min-h-screen bg-background dark">
+      <div className="min-h-screen bg-background">
         <Navigation />
         <main>
           <HeroSection />

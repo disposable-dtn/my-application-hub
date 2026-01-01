@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="text-center md:text-left">
               <span className="text-xl font-bold font-mono text-gradient">{"<DTN />"}</span>
               <p className="text-sm text-muted-foreground mt-2">
-                Robotics Engineering Student • Olin College
+                Electrical and Computer Engineering • Franklin W. Olin College of Engineering
               </p>
             </div>
 

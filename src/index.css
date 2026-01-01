@@ -17,16 +17,22 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 25% 10%;
 
-    --primary: 180 70% 35%;
+    /* Brand palette (DTN) — fixed across light/dark */
+    --brand-1: 210 85% 48%;
+    --brand-2: 265 80% 56%;
+    --brand-3: 195 70% 42%;
+
+    /* App semantic colors */
+    --primary: var(--brand-1);
     --primary-foreground: 0 0% 100%;
 
     --secondary: 220 15% 92%;
-    --secondary-foreground: 215 20.2247% 65.098%;
+    --secondary-foreground: 220 18% 22%;
 
     --muted: 220 15% 92%;
     --muted-foreground: 220 10% 45%;
 
-    --accent: 280 65% 55%;
+    --accent: var(--brand-2);
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -34,14 +40,14 @@
 
     --border: 220 15% 88%;
     --input: 220 15% 88%;
-    --ring: 180 70% 35%;
+    --ring: var(--brand-1);
 
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --glow: 180 70% 50%;
-    --gradient-start: 180 70% 35%;
-    --gradient-end: 280 65% 55%;
+    --glow: var(--brand-2);
+    --gradient-start: var(--brand-1);
+    --gradient-end: var(--brand-2);
     --surface: 220 20% 99%;
     --surface-elevated: 0 0% 100%;
   }
@@ -56,7 +62,12 @@
     --popover: 220 25% 9%;
     --popover-foreground: 220 15% 95%;
 
-    --primary: 180 70% 50%;
+    /* Brand palette stays identical in dark mode */
+    --brand-1: 210 85% 48%;
+    --brand-2: 265 80% 56%;
+    --brand-3: 195 70% 42%;
+
+    --primary: var(--brand-1);
     --primary-foreground: 220 25% 6%;
 
     --secondary: 220 20% 15%;
@@ -65,7 +76,7 @@
     --muted: 220 20% 15%;
     --muted-foreground: 220 15% 70%;
 
-    --accent: 280 65% 60%;
+    --accent: var(--brand-2);
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 30%;
@@ -73,12 +84,12 @@
 
     --border: 220 20% 18%;
     --input: 220 20% 18%;
-    --ring: 180 70% 50%;
+    --ring: var(--brand-1);
 
     /* Custom tokens */
-    --glow: 180 70% 50%;
-    --gradient-start: 180 70% 50%;
-    --gradient-end: 280 65% 60%;
+    --glow: var(--brand-2);
+    --gradient-start: var(--brand-1);
+    --gradient-end: var(--brand-2);
     --surface: 220 25% 8%;
     --surface-elevated: 220 25% 11%;
   }
