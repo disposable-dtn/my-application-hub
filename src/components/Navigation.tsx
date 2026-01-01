@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,6 +56,7 @@ const Navigation = () => {
                 {link.label}
               </button>
             ))}
+            <ThemeToggle />
             <Button
               size="sm"
               className="bg-gradient-primary text-primary-foreground hover:opacity-90"
@@ -89,11 +91,14 @@ const Navigation = () => {
                 {link.label}
               </button>
             ))}
-            <Button className="w-full bg-gradient-primary text-primary-foreground" asChild>
-              <a href="https://drive.google.com/file/d/1RhSll71dIIE8bKDoElAwri0bVT0XY9GJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                Resume
-              </a>
-            </Button>
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+              <Button className="flex-1 bg-gradient-primary text-primary-foreground" asChild>
+                <a href="https://drive.google.com/file/d/1RhSll71dIIE8bKDoElAwri0bVT0XY9GJ/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                  Resume
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       )}
