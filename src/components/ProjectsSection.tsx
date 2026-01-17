@@ -3,6 +3,13 @@ import { Github, Bot, Code2, CircuitBoard, Plane, Trophy, Zap } from "lucide-rea
 import { Button } from "@/components/ui/button";
 import ProjectModal from "@/components/ProjectModal";
 
+import aeroImage from "@/assets/aero.png";
+import formulaImage from "@/assets/formula.png";
+import tobotImage from "@/assets/tobot.jpeg";
+import companionCatchImage from "@/assets/companion-catch.png";
+import watchdogImage from "@/assets/watchdog.jpeg";
+import crogImage from "@/assets/crog.png";
+
 const ProjectsSection = () => {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
 
@@ -15,7 +22,7 @@ const ProjectsSection = () => {
       icon: Plane,
       featured: true,
       github: "https://github.com/Olin-Aerospace",
-      image: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800&auto=format&fit=crop&q=60",
+      image: aeroImage,
     },
     {
       title: "Formula SAE PCB Design",
@@ -25,7 +32,7 @@ const ProjectsSection = () => {
       icon: CircuitBoard,
       featured: true,
       github: "https://github.com/olin-electric-motorsports",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60",
+      image: formulaImage,
     },
     {
       title: "Tobot - Autonomous Tennis Ball Collector",
@@ -35,7 +42,7 @@ const ProjectsSection = () => {
       icon: Bot,
       featured: true,
       github: "https://github.com/ductnguyen-dtn/tobot",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=60",
+      image: tobotImage,
     },
     {
       title: "AI Fall Detector - Companion Catch",
@@ -45,7 +52,7 @@ const ProjectsSection = () => {
       icon: Trophy,
       featured: true,
       github: "https://github.com/ductnguyen-dtn/Companion-Catch",
-      image: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&auto=format&fit=crop&q=60",
+      image: companionCatchImage,
     },
     {
       title: "MIT Beaver Works - WatchDog Tracker",
@@ -55,7 +62,7 @@ const ProjectsSection = () => {
       icon: Code2,
       github: "#",
       featured: true,
-      image: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&auto=format&fit=crop&q=60",
+      image: watchdogImage,
     },
     {
       title: "CRoG - Combat Robotics",
@@ -65,7 +72,7 @@ const ProjectsSection = () => {
       icon: Zap,
       featured: true,
       github: "#",
-      image: "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?w=800&auto=format&fit=crop&q=60",
+      image: crogImage,
     },
   ];
 

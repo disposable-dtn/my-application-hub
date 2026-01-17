@@ -6,9 +6,9 @@ import { cn } from "@/lib/utils";
 import { ExternalLink, Linkedin } from "lucide-react";
 
 const RESUME_URL =
-  "https://drive.google.com/file/d/1RhSll71dIIE8bKDoElAwri0bVT0XY9GJ/view?usp=sharing";
+  "https://drive.google.com/file/d/1orQ46bPqKwqrKI5AZGbWYpfPCoUjYxWT/view?usp=sharing";
 const RESUME_PREVIEW_URL =
-  "https://drive.google.com/file/d/1RhSll71dIIE8bKDoElAwri0bVT0XY9GJ/preview";
+  "https://drive.google.com/file/d/1orQ46bPqKwqrKI5AZGbWYpfPCoUjYxWT/preview";
 const LINKEDIN_URL = "https://www.linkedin.com/in/ducnguyen-dtn/";
 
 type ResumeModalButtonProps = {
