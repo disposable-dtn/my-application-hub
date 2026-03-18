@@ -19,7 +19,8 @@ const Navigation = () => {
 
   const navLinks = [
     { label: "About", path: "/about" },
-    { label: "Projects", path: "/projects" },
+    { label: "Team Projects", path: "/team-projects" },
+    { label: "Personal Projects", path: "/personal-projects" },
     { label: "Experience", path: "/experience" },
     { label: "Contact", path: "/contact" },
   ];
@@ -32,7 +33,6 @@ const Navigation = () => {
     >
       <div className="container px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
           <Link
             to="/"
             className="text-xl font-bold font-mono text-gradient hover:opacity-90 transition-opacity duration-500"
@@ -40,8 +40,7 @@ const Navigation = () => {
             {"<DTN />"}
           </Link>
 
-          {/* Desktop navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -67,7 +66,6 @@ const Navigation = () => {
             />
           </div>
 
-          {/* Mobile menu button */}
           <button
             className="md:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -77,7 +75,6 @@ const Navigation = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border">
           <div className="container px-6 py-6 space-y-4">
