@@ -1,11 +1,9 @@
-import { Github, Linkedin, Mail, FileText, ChevronDown } from "lucide-react";
+import { Github, Linkedin, Mail, FileText } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ResumeModalButton from "@/components/ResumeModalButton";
 
 const HeroSection = () => {
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
 
     return (
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
