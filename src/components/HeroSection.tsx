@@ -115,15 +115,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-0 right-0 flex justify-center">
-          <button
-            onClick={() => scrollToSection("about")}
-            className="p-3 text-muted-foreground hover:text-foreground transition-colors duration-500 ease-out hover:shadow-[0_0_22px_hsl(var(--glow)_/_0.14)] animate-float"
-          >
-            <ChevronDown className="w-6 h-6" />
-          </button>
-        </div>
       </section>
     );
 };
