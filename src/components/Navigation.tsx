@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, FileText } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import ResumeModalButton from "@/components/ResumeModalButton";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,16 +17,11 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-    setIsMobileMenuOpen(false);
-  };
-
   const navLinks = [
-    { label: "About", id: "about" },
-    { label: "Projects", id: "projects" },
-    { label: "Experience", id: "experience" },
-    { label: "Contact", id: "contact" },
+    { label: "About", path: "/about" },
+    { label: "Projects", path: "/projects" },
+    { label: "Experience", path: "/experience" },
+    { label: "Contact", path: "/contact" },
   ];
 
   return (
@@ -37,23 +33,27 @@ const Navigation = () => {
       <div className="container px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          <Link
+            to="/"
             className="text-xl font-bold font-mono text-gradient hover:opacity-90 transition-opacity duration-500"
           >
             {"<DTN />"}
-          </button>
+          </Link>
 
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-500"
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`text-sm font-medium transition-colors duration-500 ${
+                  location.pathname === link.path
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
             <ThemeToggle />
             <ResumeModalButton
@@ -82,13 +82,18 @@ const Navigation = () => {
         <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border">
           <div className="container px-6 py-6 space-y-4">
             {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left py-3 text-lg font-medium text-foreground hover:text-foreground transition-colors duration-500"
+              <Link
+                key={link.path}
+                to={link.path}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block w-full text-left py-3 text-lg font-medium transition-colors duration-500 ${
+                  location.pathname === link.path
+                    ? "text-primary"
+                    : "text-foreground hover:text-foreground"
+                }`}
               >
                 {link.label}
-              </button>
+              </Link>
             ))}
             <div className="flex items-center gap-4">
               <ThemeToggle />
