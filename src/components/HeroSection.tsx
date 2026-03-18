@@ -78,10 +78,12 @@ const HeroSection = () => {
                 size="lg"
                 variant="outline"
                 className="gap-2 hover:shadow-[0_0_22px_hsl(var(--glow)_/_0.14)]"
-                onClick={() => scrollToSection("contact")}
+                asChild
               >
-                <Mail className="w-4 h-4" />
-                Get in Touch
+                <Link to="/contact">
+                  <Mail className="w-4 h-4" />
+                  Get in Touch
+                </Link>
               </Button>
             </div>
 
