@@ -25,7 +25,7 @@ const ProjectsSection = () => {
       image: aeroImage,
     },
     {
-      title: "Formula SAE PCB Design",
+      title: "Formula SAE: Charging Board PCB",
       description: "Redesigned three subsystem boards (Charging Board, BMS Core, PDU) in KiCad, migrating from ATmega16M1 to STM32G441KBT6 with updated schematics and PCB layouts.",
       longDescription: "Hands-on engineering work was performed on multiple electric vehicle subsystems with a focus on embedded electronics, firmware, and PCB redesign. The vehicle architecture was upgraded by migrating from an ATmega16M1 to an STM32G441KBT6 microcontroller across the Charging Board, BMS Core, and Power Distribution Unit. Schematics were fully redrawn in KiCad, with updated footprints, pin mappings, and electrical connections, and PCB layouts were revised to support new routing, power stages, and interfaces. Existing firmware was modified to run on the STM32, including updates to pin definitions, peripherals, CAN communication, and I/O behavior. Board bring-up and systematic debugging were conducted to validate correct operation and subsystem reliability.",
       tags: ["KiCad", "STM32", "PCB Design", "CAN bus"],
