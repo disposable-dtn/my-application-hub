@@ -15,7 +15,7 @@ const ProjectsSection = () => {
 
   const projects = [
     {
-      title: "Fixed-Wing UAV System",
+      title: "Olin AERO: Firmware Configuration for Fixed Wing Test Rig",
       description: "Configured ArduPilot firmware for fixed-wing aircraft. Integrated motors, ESCs, servos, IMU, GPS, and telemetry systems with PID tuning.",
       longDescription: "Hands-on work was conducted on a fixed-wing unmanned aircraft system with a focus on firmware configuration, avionics integration, and flight validation. ArduPilot firmware was customized for the aircraft, and motors, ESCs, servos, IMU, GPS, telemetry radios, and onboard avionics were wired and integrated to ensure reliable power distribution and signal integrity. RC transmitter inputs were mapped and validated, PID tuning was supported, and both ground and flight testing were carried out to evaluate stability, control response, and overall system performance. This work provided practical experience in embedded flight-control systems, sensor integration, and real-world debugging in safety-critical aerospace robotics environments.",
       tags: ["ArduPilot", "UAV", "Embedded", "Avionics"],
