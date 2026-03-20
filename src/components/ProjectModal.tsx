@@ -7,7 +7,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { LucideIcon, ChevronLeft, ChevronRight } from "lucide-react";
-import type { ProjectImage } from "@/components/ProjectCard";
+import type { ProjectImage, ProjectSection } from "@/components/ProjectCard";
 
 interface ProjectModalProps {
   isOpen: boolean;
@@ -16,19 +16,22 @@ interface ProjectModalProps {
     title: string;
     description: string;
     longDescription: string;
-    image: string;
+    image?: string;
     tags: string[];
     icon: LucideIcon;
     gallery?: ProjectImage[];
+    sections?: ProjectSection[];
   };
 }
 
 const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const images = project.gallery && project.gallery.length > 0
+  const hasSections = project.sections && project.sections.length > 0;
+
+  const images = !hasSections && project.gallery && project.gallery.length > 0
     ? project.gallery
-    : project.image
+    : !hasSections && project.image
       ? [{ src: project.image, caption: "" }]
       : [];
 
@@ -49,7 +52,33 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
           </div>
         </DialogHeader>
 
-        {images.length > 0 && (
+        {/* Sections mode: sequential image + description */}
+        {hasSections && (
+          <div className="space-y-6">
+            {project.sections!.map((section, i) => (
+              <div key={i}>
+                {section.image && (
+                  <div className="w-full aspect-video rounded-lg overflow-hidden bg-muted mb-3">
+                    <img
+                      src={section.image}
+                      alt={section.title || project.title}
+                      className="w-full h-full object-contain bg-muted"
+                    />
+                  </div>
+                )}
+                {section.title && (
+                  <h3 className="text-lg font-semibold text-foreground mb-2">{section.title}</h3>
+                )}
+                <p className="text-muted-foreground leading-relaxed text-sm whitespace-pre-line">
+                  {section.content}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Gallery/single image mode */}
+        {!hasSections && images.length > 0 && (
           <div className="relative">
             <div className="w-full aspect-video rounded-lg overflow-hidden bg-muted mb-2">
               <img
@@ -98,9 +127,12 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
           </div>
         )}
 
-        <DialogDescription className="text-muted-foreground leading-relaxed text-sm">
-          {project.longDescription}
-        </DialogDescription>
+        {/* Long description (only shown when NOT using sections) */}
+        {!hasSections && (
+          <DialogDescription className="text-muted-foreground leading-relaxed text-sm">
+            {project.longDescription}
+          </DialogDescription>
+        )}
 
         <div className="flex flex-wrap gap-2 mt-4">
           {project.tags.map((tag) => (

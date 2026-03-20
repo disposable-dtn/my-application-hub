@@ -12,6 +12,31 @@ import companionCatchImage from "@/assets/companion-catch.png";
 
 const personalProjects: Project[] = [
   {
+    title: "6-DoF Robotic Arm",
+    description: "Designing a 6-axis robotic arm with cycloidal gearboxes, hollow arm structure, and scalable joint architecture.",
+    longDescription: "",
+    tags: ["Robotics", "CAD", "3D Printing", "Mechanical", "Embedded"],
+    icon: Wrench,
+    github: "#",
+    sections: [
+      {
+        title: "Joint Drive System — Cycloidal Gearbox (J1, J2)",
+        content: "For the base joints (J1 and J2), I selected and implemented an open-source cycloidal gearbox design from How To Mechatronics. This decision was driven by the need for high torque density, low backlash, and manufacturability using accessible methods.",
+      },
+      {
+        content: "I 3D printed all gearbox components and am currently in the testing phase, evaluating performance factors such as torque transmission, smoothness of motion, wear, and structural reliability. This phase is critical for validating whether a 3D-printed cycloidal solution is viable for load-bearing joints.",
+      },
+      {
+        title: "Mechanical Architecture — Hollow Arm Design Exploration",
+        content: "In parallel, I am developing a hollow arm structure to allow internal routing of wires and components. This approach aims to improve cable management, reduce external clutter, and increase overall system reliability.\n\nDesigning this structure requires balancing stiffness, weight, and manufacturability, especially when integrating with rotating joints and maintaining alignment across multiple axes.",
+      },
+      {
+        title: "Joint Design — J3 to J6 Development",
+        content: "For the remaining joints (J3–J6), I am actively exploring different joint architectures and actuation strategies. This includes evaluating tradeoffs between compactness, torque requirements, and ease of assembly.\n\nThe goal is to create a consistent and scalable joint design that maintains precision while adapting to the reduced load requirements of distal joints.",
+      },
+    ],
+  },
+  {
     title: "Tobot - Autonomous Tennis Ball Collector",
     description: "Built an autonomous robot using ROS2 with SLAM and NAV2 for navigation. Developed in Gazebo and visualized with RViz for real-time path planning and obstacle avoidance.",
     longDescription: "Hands-on development was carried out on an autonomous mobile robot designed for indoor navigation and object collection. The system was built using ROS2 and implemented SLAM and Nav2 for localization, mapping, and autonomous path planning. Simulation and validation were performed in Gazebo and RViz prior to physical deployment. Hardware and software components were integrated to enable reliable navigation and task execution in a dynamic environment. This project provided experience in autonomous robotics software stacks, simulation-driven development, and system-level debugging.",
@@ -28,15 +53,6 @@ const personalProjects: Project[] = [
     icon: Trophy,
     github: "https://github.com/ductnguyen-dtn/Companion-Catch",
     image: companionCatchImage,
-  },
-  {
-    title: "Robot Arm",
-    description: "Robotic arm project — details coming soon.",
-    longDescription: "Details for this project are coming soon. Check back later for a full description of the robot arm project.",
-    tags: ["Robotics", "Embedded", "Mechanical"],
-    icon: Wrench,
-    github: "#",
-    image: "",
   },
 ];
 
