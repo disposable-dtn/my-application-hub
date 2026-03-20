@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Github, Plane, CircuitBoard, Code2, Zap } from "lucide-react";
+import { Github, Plane, CircuitBoard, Code2, Zap, Cpu } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ProjectModal from "@/components/ProjectModal";
@@ -22,6 +22,59 @@ import formulaFinalReorg from "@/assets/formula-final-reorg.png";
 
 const teamProjects: Project[] = [
   {
+    title: "Formula SAE: Charging Board PCB",
+    description: "Designed and iterated on a custom charging control board for a Formula SAE electric vehicle, taking ownership of the schematic architecture, MCU selection, and PCB layout using KiCad.",
+    longDescription: "",
+    tags: ["Embedded Systems", "PCB Design", "STM32", "CAN Bus", "KiCad"],
+    icon: CircuitBoard,
+    github: "https://github.com/olin-electric-motorsports",
+    image: formulaImage,
+    sections: [
+      {
+        image: formulaWrongStm,
+        content: "Embedded Systems · PCB Design · STM32 · CAN Bus · KiCad\n\nI designed and iterated on a custom charging control board for a Formula SAE electric vehicle, taking ownership of the schematic architecture, MCU selection, and PCB layout using KiCad. This project required rapid self-learning, debugging at scale, and balancing electrical design tradeoffs under tight team deadlines.",
+      },
+      {
+        image: formulaCorrectStm,
+        title: "Early Development — Toolchain Ramp-Up & Critical Design Reset",
+        content: "I began this project with no prior experience in KiCad, quickly learning schematic capture, footprint management, and PCB workflows. During initial development, I selected an incorrect STM32 microcontroller, which forced a full redesign.\n\nRather than patching the issue, I restarted from first principles—revalidating datasheets, pin mappings, and system requirements. This reset significantly improved design accuracy and established a disciplined, documentation-driven workflow.",
+      },
+      {
+        image: formulaFinalSchematic,
+        title: "System Architecture — MCU Integration & Interface Expansion",
+        content: "I rebuilt the schematic around the correct STM32, aligning all subsystems with the MCU's pinout and electrical constraints. As system requirements evolved, I transitioned from a legacy seven-segment display to an LCD interface to improve usability and data visibility.\n\nThis introduced new constraints: the original MCU lacked sufficient GPIO capacity. I identified this bottleneck early and migrated to a higher pin-count STM32 variant, redesigning the schematic to support expanded I/O while maintaining signal integrity.",
+      },
+      {
+        image: formulaCanController,
+        title: "Debugging at Scale — Footprint & Schematic Validation",
+        content: "I identified and resolved over 50 footprint-related errors, standardizing component libraries and ensuring manufacturing compatibility. This phase required careful cross-referencing between datasheets, symbol libraries, and PCB constraints.\n\nBy the end of this stage, the schematic was fully validated at the component level and ready for layout, with improved modularity and maintainability.",
+      },
+      {
+        image: formulaPcbTop,
+        title: "CAN Communication — Reliability-Critical Subsystem",
+        content: "I designed and finalized the CAN controller schematic, ensuring proper transceiver integration and signal routing aligned with automotive communication standards.\n\nThis subsystem was critical for vehicle-level communication, and the design emphasized robustness, correct termination, and noise resilience.",
+      },
+      {
+        image: formulaPcbBottom,
+        title: "PCB Design — Aggressive Size Optimization & Failure Analysis",
+        content: "I completed a full PCB layout iteration, reducing board size by approximately 50% compared to the previous generation.\n\nHowever, post-layout review revealed critical issues:\n\nCAN signal interference due to routing proximity and lack of isolation\n\nInefficient power distribution paths\n\nPoor return path continuity caused by a fragmented ground plane\n\nRather than pushing forward with a flawed design, I rejected the layout and conducted a detailed failure analysis. This reinforced key principles in high-speed and power electronics design, particularly the importance of grounding strategy and signal integrity.",
+      },
+      {
+        image: formulaFinalReorg,
+        title: "Final Iteration — Design Refactor & Engineering Handoff",
+        content: "In the final phase, I refactored sections of the schematic to reduce routing complexity and improve layout cleanliness for the next iteration.\n\nDue to project timeline constraints and parallel firmware development priorities, I transitioned the design to the electrical lead for continuation. I ensured the handoff included a clean schematic, corrected footprints, and clear design intent.",
+      },
+    ],
+  },
+  {
+    title: "Formula SAE: Charging Board Firmware",
+    description: "Firmware development for the Formula SAE Charging Board — details coming soon.",
+    longDescription: "Details for this project are coming soon. Check back later for a full description of the Charging Board firmware development.",
+    tags: ["STM32", "Embedded C", "CAN Bus", "Firmware"],
+    icon: Cpu,
+    github: "https://github.com/olin-electric-motorsports",
+  },
+  {
     title: "Olin AERO: Firmware Configuration for Fixed Wing Test Rig",
     description: "Configured ArduPilot firmware for fixed-wing aircraft. Integrated motors, ESCs, servos, IMU, GPS, and telemetry systems with PID tuning.",
     longDescription: "Hands-on work was conducted on a fixed-wing unmanned aircraft system with a focus on firmware configuration, avionics integration, and flight validation. ArduPilot firmware was customized for the aircraft, and motors, ESCs, servos, IMU, GPS, telemetry radios, and onboard avionics were wired and integrated to ensure reliable power distribution and signal integrity. RC transmitter inputs were mapped and validated, PID tuning was supported, and both ground and flight testing were carried out to evaluate stability, control response, and overall system performance. This work provided practical experience in embedded flight-control systems, sensor integration, and real-world debugging in safety-critical aerospace robotics environments.",
@@ -31,31 +84,21 @@ const teamProjects: Project[] = [
     image: aeroImage,
   },
   {
+    title: "CRoG - Combat Robotics",
+    description: "Designed and built a 3lb combat robot. Iterated designs using Onshape for CAD modeling and manufactured components with 3D printing and laser cutting.",
+    longDescription: "An ant-weight combat robot was designed, built, and iteratively refined through hands-on mechanical, electrical, and embedded development. Embedded control logic was implemented for both the drivetrain and weapon system, with emphasis on reliability under high-impact conditions. Multiple mechanical and PCB redesigns were performed based on destructive testing results, leading to improved durability and performance. This work developed strong skills in rapid prototyping, embedded control, and design iteration under extreme operational constraints.",
+    tags: ["CAD", "Onshape", "3D Printing", "Mechanical"],
+    icon: Zap,
+    github: "#",
+    image: crogImage,
+  },
+  {
     title: "Olin AERO: Firmware Configuration for VTOL Test Rig",
     description: "Configured ArduPilot firmware for a VTOL test rig with transition flight modes. Details coming soon.",
     longDescription: "Details for this project are coming soon. Check back later for a full description of the VTOL test rig firmware configuration work.",
     tags: ["ArduPilot", "VTOL", "Embedded", "Avionics"],
     icon: Plane,
     github: "https://github.com/Olin-Aerospace",
-    image: aeroImage,
-  },
-  {
-    title: "Formula SAE: Charging Board PCB",
-    description: "Redesigned the Charging Board PCB in KiCad, migrating from ATmega16M1 to STM32G441KBT6 with updated schematics, CAN controller, and optimized PCB layouts.",
-    longDescription: "This project involved multiple iterations of schematic design and PCB layout for the Formula SAE electric vehicle's Charging Board. Starting with learning KiCad fundamentals, the initial design used the wrong STM32 model and had to be scrapped. The second iteration used the correct STM32G441KBT6 with properly organized core components. Over 50 footprint errors were resolved in subsequent revisions, including removing the legacy seven-segment display and adding LCD screen ports — which revealed insufficient GPIO pins on the original STM32, requiring a migration to a higher pin-count variant. The CAN controller schematic was finalized with proper wiring per communication standards. The PCB layout achieved a ~50% board size reduction from the previous year's design, though it was rejected due to CAN signal interference, suboptimal power routing, and a fragmented ground plane on the bottom layer. The final reorganized schematic was handed off to the electrical lead for continuation.",
-    tags: ["KiCad", "STM32", "PCB Design", "CAN bus"],
-    icon: CircuitBoard,
-    github: "https://github.com/olin-electric-motorsports",
-    image: formulaImage,
-    gallery: [
-      { src: formulaWrongStm, caption: "First attempt using KiCad — mistakenly selected the wrong STM32 model, requiring a full restart." },
-      { src: formulaCorrectStm, caption: "Second iteration with the correct STM32G441KBT6, with organized core components and proper pin configuration." },
-      { src: formulaFinalSchematic, caption: "Refined schematic after resolving 50+ footprint errors, adding LCD ports, and updating to a higher pin-count STM32." },
-      { src: formulaCanController, caption: "Finalized CAN controller schematic with corrected footprints and proper wiring per communication standards." },
-      { src: formulaPcbTop, caption: "Second PCB iteration (top layer) — ~50% size reduction, rejected due to CAN interference and power routing issues." },
-      { src: formulaPcbBottom, caption: "Bottom layer showing fragmented ground plane from excessive routing cuts, impacting signal integrity." },
-      { src: formulaFinalReorg, caption: "Final reorganized schematic before handover to the electrical lead for continued development." },
-    ],
   },
   {
     title: "MIT Beaver Works - WatchDog Tracker",
@@ -65,15 +108,6 @@ const teamProjects: Project[] = [
     icon: Code2,
     github: "#",
     image: watchdogImage,
-  },
-  {
-    title: "CRoG - Combat Robotics",
-    description: "Designed and built 3lb and 15lb combat robots. Iterated designs using Onshape for CAD modeling and manufactured components with 3D printing and laser cutting.",
-    longDescription: "An ant-weight combat robot was designed, built, and iteratively refined through hands-on mechanical, electrical, and embedded development. Embedded control logic was implemented for both the drivetrain and weapon system, with emphasis on reliability under high-impact conditions. Multiple mechanical and PCB redesigns were performed based on destructive testing results, leading to improved durability and performance. This work developed strong skills in rapid prototyping, embedded control, and design iteration under extreme operational constraints.",
-    tags: ["CAD", "Onshape", "3D Printing", "Mechanical"],
-    icon: Zap,
-    github: "#",
-    image: crogImage,
   },
 ];
 

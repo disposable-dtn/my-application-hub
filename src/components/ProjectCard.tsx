@@ -6,6 +6,12 @@ export type ProjectImage = {
   caption: string;
 };
 
+export type ProjectSection = {
+  image?: string;
+  title?: string;
+  content: string;
+};
+
 export type Project = {
   title: string;
   description: string;
@@ -14,8 +20,9 @@ export type Project = {
   icon: LucideIcon;
   featured?: boolean;
   github?: string;
-  image: string;
+  image?: string;
   gallery?: ProjectImage[];
+  sections?: ProjectSection[];
 };
 
 const ProjectCard = ({ project, onClick }: { project: Project; onClick: () => void }) => (
