@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -5,7 +6,8 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { LucideIcon } from "lucide-react";
+import { LucideIcon, ChevronLeft, ChevronRight } from "lucide-react";
+import type { ProjectImage } from "@/components/ProjectCard";
 
 interface ProjectModalProps {
   isOpen: boolean;
@@ -17,13 +19,25 @@ interface ProjectModalProps {
     image: string;
     tags: string[];
     icon: LucideIcon;
+    gallery?: ProjectImage[];
   };
 }
 
 const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const images = project.gallery && project.gallery.length > 0
+    ? project.gallery
+    : project.image
+      ? [{ src: project.image, caption: "" }]
+      : [];
+
+  const handlePrev = () => setCurrentIndex((i) => (i === 0 ? images.length - 1 : i - 1));
+  const handleNext = () => setCurrentIndex((i) => (i === images.length - 1 ? 0 : i + 1));
+
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+    <Dialog open={isOpen} onOpenChange={(open) => { if (!open) { setCurrentIndex(0); onClose(); } }}>
+      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <div className="flex items-center gap-3 mb-2">
             <div className="p-2 rounded-lg bg-gradient-primary text-primary-foreground">
@@ -35,21 +49,59 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
           </div>
         </DialogHeader>
 
-        {/* Project Image */}
-        <div className="w-full aspect-video rounded-lg overflow-hidden bg-muted mb-4">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-full object-cover"
-          />
-        </div>
+        {images.length > 0 && (
+          <div className="relative">
+            <div className="w-full aspect-video rounded-lg overflow-hidden bg-muted mb-2">
+              <img
+                src={images[currentIndex].src}
+                alt={images[currentIndex].caption || project.title}
+                className="w-full h-full object-contain bg-muted"
+              />
+            </div>
 
-        {/* Project Description */}
+            {images.length > 1 && (
+              <>
+                <button
+                  onClick={handlePrev}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-background/80 border border-border text-foreground hover:bg-accent transition-colors"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={handleNext}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-full bg-background/80 border border-border text-foreground hover:bg-accent transition-colors"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </>
+            )}
+
+            {images[currentIndex].caption && (
+              <p className="text-sm text-muted-foreground text-center italic mb-4">
+                {images[currentIndex].caption}
+              </p>
+            )}
+
+            {images.length > 1 && (
+              <div className="flex justify-center gap-1.5 mb-4">
+                {images.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrentIndex(i)}
+                    className={`w-2 h-2 rounded-full transition-colors ${
+                      i === currentIndex ? "bg-primary" : "bg-muted-foreground/30"
+                    }`}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
         <DialogDescription className="text-muted-foreground leading-relaxed text-sm">
           {project.longDescription}
         </DialogDescription>
 
-        {/* Tags */}
         <div className="flex flex-wrap gap-2 mt-4">
           {project.tags.map((tag) => (
             <span

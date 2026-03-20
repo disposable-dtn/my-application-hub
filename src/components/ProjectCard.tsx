@@ -1,6 +1,11 @@
 import { Github } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
+export type ProjectImage = {
+  src: string;
+  caption: string;
+};
+
 export type Project = {
   title: string;
   description: string;
@@ -10,6 +15,7 @@ export type Project = {
   featured?: boolean;
   github?: string;
   image: string;
+  gallery?: ProjectImage[];
 };
 
 const ProjectCard = ({ project, onClick }: { project: Project; onClick: () => void }) => (
