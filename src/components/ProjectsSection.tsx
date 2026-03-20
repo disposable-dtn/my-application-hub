@@ -15,7 +15,7 @@ const ProjectsSection = () => {
 
   const projects = [
     {
-      title: "Fixed-Wing UAV System",
+      title: "Olin AERO: Firmware Configuration for Fixed Wing Test Rig",
       description: "Configured ArduPilot firmware for fixed-wing aircraft. Integrated motors, ESCs, servos, IMU, GPS, and telemetry systems with PID tuning.",
       longDescription: "Hands-on work was conducted on a fixed-wing unmanned aircraft system with a focus on firmware configuration, avionics integration, and flight validation. ArduPilot firmware was customized for the aircraft, and motors, ESCs, servos, IMU, GPS, telemetry radios, and onboard avionics were wired and integrated to ensure reliable power distribution and signal integrity. RC transmitter inputs were mapped and validated, PID tuning was supported, and both ground and flight testing were carried out to evaluate stability, control response, and overall system performance. This work provided practical experience in embedded flight-control systems, sensor integration, and real-world debugging in safety-critical aerospace robotics environments.",
       tags: ["ArduPilot", "UAV", "Embedded", "Avionics"],
@@ -25,7 +25,7 @@ const ProjectsSection = () => {
       image: aeroImage,
     },
     {
-      title: "Formula SAE PCB Design",
+      title: "Formula SAE: Charging Board PCB",
       description: "Redesigned three subsystem boards (Charging Board, BMS Core, PDU) in KiCad, migrating from ATmega16M1 to STM32G441KBT6 with updated schematics and PCB layouts.",
       longDescription: "Hands-on engineering work was performed on multiple electric vehicle subsystems with a focus on embedded electronics, firmware, and PCB redesign. The vehicle architecture was upgraded by migrating from an ATmega16M1 to an STM32G441KBT6 microcontroller across the Charging Board, BMS Core, and Power Distribution Unit. Schematics were fully redrawn in KiCad, with updated footprints, pin mappings, and electrical connections, and PCB layouts were revised to support new routing, power stages, and interfaces. Existing firmware was modified to run on the STM32, including updates to pin definitions, peripherals, CAN communication, and I/O behavior. Board bring-up and systematic debugging were conducted to validate correct operation and subsystem reliability.",
       tags: ["KiCad", "STM32", "PCB Design", "CAN bus"],
