@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Github, Bot, Trophy, Wrench } from "lucide-react";
+import armRingGear from "@/assets/arm-ring-gear.jpg";
+import armDisk1 from "@/assets/arm-disk1.jpg";
+import armDisk2 from "@/assets/arm-disk2.jpg";
+import armPlate1 from "@/assets/arm-plate1.jpg";
+import armPlate2 from "@/assets/arm-plate2.jpg";
+import armPlate3 from "@/assets/arm-plate3.jpg";
+import armPlate4 from "@/assets/arm-plate4.jpg";
+import armParts from "@/assets/arm-parts.jpg";
+import armCycloidalDisk from "@/assets/arm-cycloidal-disk.jpg";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ProjectModal from "@/components/ProjectModal";
@@ -22,9 +31,39 @@ const personalProjects: Project[] = [
       {
         title: "Joint Drive System — Cycloidal Gearbox (J1, J2)",
         content: "For the base joints (J1 and J2), I selected and implemented an open-source cycloidal gearbox design from How To Mechatronics. This decision was driven by the need for high torque density, low backlash, and manufacturability using accessible methods.",
+        image: armRingGear,
       },
       {
+        image: armCycloidalDisk,
         content: "I 3D printed all gearbox components and am currently in the testing phase, evaluating performance factors such as torque transmission, smoothness of motion, wear, and structural reliability. This phase is critical for validating whether a 3D-printed cycloidal solution is viable for load-bearing joints.",
+      },
+      {
+        image: armDisk1,
+      content: "",
+      },
+      {
+        image: armDisk2,
+        content: "",
+      },
+      {
+        image: armPlate1,
+        content: "",
+      },
+      {
+        image: armPlate2,
+        content: "",
+      },
+      {
+        image: armPlate3,
+        content: "",
+      },
+      {
+        image: armPlate4,
+        content: "",
+      },
+      {
+        image: armParts,
+        content: "",
       },
       {
         title: "Mechanical Architecture — Hollow Arm Design Exploration",
