@@ -23,56 +23,20 @@ const personalProjects: Project[] = [
   {
     title: "6-DoF Robotic Arm",
     description: "Designing a 6-axis robotic arm with cycloidal gearboxes, hollow arm structure, and scalable joint architecture.",
-    longDescription: "",
+    longDescription: "For the base joints (J1 and J2), I selected and implemented an open-source cycloidal gearbox design from How To Mechatronics. This decision was driven by the need for high torque density, low backlash, and manufacturability using accessible methods.\n\nI 3D printed all gearbox components and am currently in the testing phase, evaluating performance factors such as torque transmission, smoothness of motion, wear, and structural reliability. This phase is critical for validating whether a 3D-printed cycloidal solution is viable for load-bearing joints.\n\nIn parallel, I am developing a hollow arm structure to allow internal routing of wires and components. This approach aims to improve cable management, reduce external clutter, and increase overall system reliability.\n\nFor the remaining joints (J3–J6), I am actively exploring different joint architectures and actuation strategies, evaluating tradeoffs between compactness, torque requirements, and ease of assembly.",
     tags: ["Robotics", "CAD", "3D Printing", "Mechanical", "Embedded"],
     icon: Wrench,
     github: "#",
-    sections: [
-      {
-        title: "Joint Drive System — Cycloidal Gearbox (J1, J2)",
-        content: "For the base joints (J1 and J2), I selected and implemented an open-source cycloidal gearbox design from How To Mechatronics. This decision was driven by the need for high torque density, low backlash, and manufacturability using accessible methods.",
-        image: armRingGear,
-      },
-      {
-        image: armCycloidalDisk,
-        content: "I 3D printed all gearbox components and am currently in the testing phase, evaluating performance factors such as torque transmission, smoothness of motion, wear, and structural reliability. This phase is critical for validating whether a 3D-printed cycloidal solution is viable for load-bearing joints.",
-      },
-      {
-        image: armDisk1,
-      content: "",
-      },
-      {
-        image: armDisk2,
-        content: "",
-      },
-      {
-        image: armPlate1,
-        content: "",
-      },
-      {
-        image: armPlate2,
-        content: "",
-      },
-      {
-        image: armPlate3,
-        content: "",
-      },
-      {
-        image: armPlate4,
-        content: "",
-      },
-      {
-        image: armParts,
-        content: "",
-      },
-      {
-        title: "Mechanical Architecture — Hollow Arm Design Exploration",
-        content: "In parallel, I am developing a hollow arm structure to allow internal routing of wires and components. This approach aims to improve cable management, reduce external clutter, and increase overall system reliability.\n\nDesigning this structure requires balancing stiffness, weight, and manufacturability, especially when integrating with rotating joints and maintaining alignment across multiple axes.",
-      },
-      {
-        title: "Joint Design — J3 to J6 Development",
-        content: "For the remaining joints (J3–J6), I am actively exploring different joint architectures and actuation strategies. This includes evaluating tradeoffs between compactness, torque requirements, and ease of assembly.\n\nThe goal is to create a consistent and scalable joint design that maintains precision while adapting to the reduced load requirements of distal joints.",
-      },
+    gallery: [
+      { src: armRingGear, caption: "Ring gear — cycloidal gearbox housing" },
+      { src: armCycloidalDisk, caption: "Cycloidal disk" },
+      { src: armDisk1, caption: "Output disk" },
+      { src: armDisk2, caption: "Bearing plate" },
+      { src: armPlate1, caption: "Base plate" },
+      { src: armPlate2, caption: "Mounting plate" },
+      { src: armPlate3, caption: "Top plate" },
+      { src: armPlate4, caption: "Bottom plate" },
+      { src: armParts, caption: "Assorted gearbox components" },
     ],
   },
   {
