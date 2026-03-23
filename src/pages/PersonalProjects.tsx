@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Github, Bot, Trophy, Wrench } from "lucide-react";
+import armRingGear from "@/assets/arm-ring-gear.jpg";
+import armDisk1 from "@/assets/arm-disk1.jpg";
+import armDisk2 from "@/assets/arm-disk2.jpg";
+import armPlate1 from "@/assets/arm-plate1.jpg";
+import armPlate2 from "@/assets/arm-plate2.jpg";
+import armPlate3 from "@/assets/arm-plate3.jpg";
+import armPlate4 from "@/assets/arm-plate4.jpg";
+import armParts from "@/assets/arm-parts.jpg";
+import armCycloidalDisk from "@/assets/arm-cycloidal-disk.jpg";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ProjectModal from "@/components/ProjectModal";
