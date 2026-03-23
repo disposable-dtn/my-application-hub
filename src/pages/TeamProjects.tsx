@@ -31,13 +31,16 @@ const teamProjects: Project[] = [
     image: formulaImage,
     sections: [
       {
+        content: "I designed and iterated on a custom charging control board for a Formula SAE electric vehicle, taking ownership of the schematic architecture, MCU selection, and PCB layout using KiCad. This project required rapid self-learning, debugging at scale, and balancing electrical design tradeoffs under tight team deadlines.",
+      },
+      {
+        title: "Early Development — Toolchain Ramp-Up & Critical Design Reset",
         image: formulaWrongStm,
-        content: "Embedded Systems · PCB Design · STM32 · CAN Bus · KiCad\n\nI designed and iterated on a custom charging control board for a Formula SAE electric vehicle, taking ownership of the schematic architecture, MCU selection, and PCB layout using KiCad. This project required rapid self-learning, debugging at scale, and balancing electrical design tradeoffs under tight team deadlines.",
+        content: "I began this project with no prior experience in KiCad, quickly learning schematic capture, footprint management, and PCB workflows. During initial development, I selected an incorrect STM32 microcontroller, which forced a full redesign.",
       },
       {
         image: formulaCorrectStm,
-        title: "Early Development — Toolchain Ramp-Up & Critical Design Reset",
-        content: "I began this project with no prior experience in KiCad, quickly learning schematic capture, footprint management, and PCB workflows. During initial development, I selected an incorrect STM32 microcontroller, which forced a full redesign.\n\nRather than patching the issue, I restarted from first principles—revalidating datasheets, pin mappings, and system requirements. This reset significantly improved design accuracy and established a disciplined, documentation-driven workflow.",
+        content: "Rather than patching the issue, I restarted from first principles—revalidating datasheets, pin mappings, and system requirements. This reset significantly improved design accuracy and established a disciplined, documentation-driven workflow.",
       },
       {
         image: formulaFinalSchematic,
@@ -57,7 +60,7 @@ const teamProjects: Project[] = [
       {
         image: formulaPcbBottom,
         title: "PCB Design — Aggressive Size Optimization & Failure Analysis",
-        content: "I completed a full PCB layout iteration, reducing board size by approximately 50% compared to the previous generation.\n\nHowever, post-layout review revealed critical issues:\n\nCAN signal interference due to routing proximity and lack of isolation\n\nInefficient power distribution paths\n\nPoor return path continuity caused by a fragmented ground plane\n\nRather than pushing forward with a flawed design, I rejected the layout and conducted a detailed failure analysis. This reinforced key principles in high-speed and power electronics design, particularly the importance of grounding strategy and signal integrity.",
+        content: "I completed a full PCB layout iteration, reducing board size by approximately 50% compared to the previous generation.\n\nHowever, post-layout review revealed critical issues:\n\n• CAN signal interference due to routing proximity and lack of isolation\n• Inefficient power distribution paths\n• Poor return path continuity caused by a fragmented ground plane\n\nRather than pushing forward with a flawed design, I rejected the layout and conducted a detailed failure analysis. This reinforced key principles in high-speed and power electronics design, particularly the importance of grounding strategy and signal integrity.",
       },
       {
         image: formulaFinalReorg,
